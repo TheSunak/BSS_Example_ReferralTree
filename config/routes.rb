@@ -1,4 +1,16 @@
 ReferralTree::Application.routes.draw do
+
+  root :to => 'users#index'
+#  match 'companies' => 'companies#new'
+
+  resources :users
+  resources :companies
+
+
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

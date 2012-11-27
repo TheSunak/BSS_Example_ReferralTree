@@ -1,0 +1,34 @@
+<h1>Welcome to Referral Tree! YOU ARE A COMPANY</h1>
+
+
+<!-- This section of the code below is the simple input boxes for the page -->
+<h3>Add New Company</h3>
+<%= form_for(Company.new) do |f| %>
+  <%= f.label "Company Name:" %> <%= f.text_field :company_name %>
+  </br><%= f.submit %>
+
+
+<% end %>
+
+<!-- With a Table for the display -->
+  <table border="1" cellpadding = "5">
+        <tr>
+            <th> Company Name </th>
+            <th> Destroy it? </th>
+        </tr>
+    
+
+<% @companies.each do |company| %>
+
+  <tr> 
+        <td><%= company.company_name %> </td>
+
+        <td> <%= link_to 'Destroy', company, :confirm => 'Are you sure?',
+                                        :method => :delete %> </td>
+  </tr>
+
+  <% end %>  
+
+    </table>
+
+  <a href="/"> Back to the Front Page </a><br>
