@@ -1,0 +1,17 @@
+<h1>Add An Invitation</h1>
+
+
+<!-- This section of the code below is the simple input boxes for the page -->
+<h3>Add Invitation</h3>
+<%= form_for(Referral.new) do |f| %>
+  <%= f.label "Sender First and Last Name:" %> <%= f.text_field :from_name %>
+  <%= f.label "Sender Email:" %> <%= f.text_field :from_email %>
+  <%= f.label "Company:" %> <%= f.text_field :referral_company %>
+  <%= f.label "Recipient First and Last Name:" %> <%= f.text_field :to_name %>
+  <%= f.label "Recipient Email:" %> <%= f.text_field :to_email %>
+  </br><%= f.submit %>
+
+
+<% end %>
+
+  <a href="/"> Back to the Front Page </a><br>

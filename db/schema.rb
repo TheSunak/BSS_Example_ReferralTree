@@ -11,20 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121127192300) do
+ActiveRecord::Schema.define(:version => 20121127212026) do
 
   create_table "companies", :force => true do |t|
     t.string "company_name"
   end
 
   create_table "referrals", :force => true do |t|
-    t.integer "user_id"
-    t.integer "company_id"
+    t.string "from_name"
+    t.string "from_email"
+    t.string "referral_company"
+    t.string "to_name"
+    t.string "to_email"
   end
 
   create_table "users", :force => true do |t|
-    t.string "first_last_name"
-    t.string "email"
+    t.string  "first_last_name"
+    t.string  "email"
+    t.integer "points_total"
   end
 
 end

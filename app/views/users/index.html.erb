@@ -1,4 +1,4 @@
-<h1>Welcome to Referral Tree!</h1>
+<h1>Manage the Users</h1>
 
 
 <!-- This section of the code below is the simple input boxes for the page -->
@@ -18,6 +18,7 @@
             <th> Email Address </th>
             <th> Destroy it? </th>
         </tr>
+
     
 
 <% @users.each do |user| %>
@@ -31,7 +32,10 @@
                                         :method => :delete %> </td>
 </tr>
 
+
   <% end %>  
+
+  </table>
 
 
   <a href="/"> Back to the Front Page </a><br>

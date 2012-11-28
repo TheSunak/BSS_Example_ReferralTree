@@ -5,6 +5,7 @@ ReferralTree::Application.routes.draw do
 
   resources :users
   resources :companies
+  resources :referrals
 
 
 
